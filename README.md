@@ -1,6 +1,6 @@
 # JanusVLN: Decoupling Semantics and Spatiality with Dual Implicit Memory for Vision-Language Navigation
 
-Official implementation for ["JanusVLN: Decoupling Semantics and Spatiality with Dual Implicit Memory for Vision-Language Navigation"](https://arxiv.org/) is coming soon.
+Official implementation for ["JanusVLN: Decoupling Semantics and Spatiality with Dual Implicit Memory for Vision-Language Navigation"](https://arxiv.org/) is coming in october.
 
 ## Citing
 
