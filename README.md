@@ -1,18 +1,4 @@
-# Driving with Prior Maps: Unified Vector Prior Encoding for Autonomous Vehicle Mapping
 
-Official implementation for ["Driving with Prior Maps: Unified Vector Prior Encoding for Autonomous Vehicle Mapping"](https://arxiv.org/abs/2409.05352) is coming soon.
 
-## Citing
-
-If you find PriorDrive is useful in your research or applications, please consider giving us a star 🌟 and citing it by the following BibTeX entry.
-```
-@article{zeng2024driving,
-  title={Driving with Prior Maps: Unified Vector Prior Encoding for Autonomous Vehicle Mapping},
-  author={Zeng, Shuang and Chang, Xinyuan and Liu, Xinran and Pan, Zheng and Wei, Xing},
-  journal={arXiv preprint arXiv:2409.05352},
-  year={2024}
-}
-```
-
-## License
-This project is licensed under the MIT License.
+# Website License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

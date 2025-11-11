@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Driving with Prior Maps: Unified Vector Prior Encoding for Autonomous Vehicle Mapping.">
+  <meta name="keywords" content="Vector HD mapping, Autonomous driving">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Driving with Prior Maps: Unified Vector Prior Encoding for Autonomous Vehicle Mapping</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Driving with Prior Maps: Unified Vector Prior Encoding for Autonomous Vehicle Mapping</h1>
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+
+          </div>
+
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              Shuang Zeng<sup>1,2*†</sup>,</span>
+            <span class="author-block">
+              Xinyuan Chang<sup>1†</sup>,</span>
+            <span class="author-block">
+              Xinran Liu<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Zheng Pan<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=KNyC5EUAAAAJ&hl=zh-CN&oi=ao/">Xing Wei</a><sup>2‡</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-affiliations">
+            <span class="author-block"> <sup>1</sup>  Amap, Alibaba Group </span>
+            &nbsp &nbsp
+            <span class="author-block"> <sup>2</sup> Xi’an Jiaotong University </span>
+
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2409.05352"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2409.05352"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/missTL/PriorDrive"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span >Code </span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+            <div class="hero-body" style="text-align: center">
+                <div class="columns is-centered">
+                     <img src="./static/images/pipeline.jpg" alt="Description of the image" style="max-width: 100%; height: auto;" />
+                </div>
+            </div>
+  </div>
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            Overview of PriorDrive. Our unified vector encoder (UVE) directly encodes diverse vector prior maps and 
+            seamlessly integrates them into existing online mapping frameworks. This integration enhances the final 
+            predictions, making them more complete and accurate than those generated without prior information.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>  
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+           High-Definition Maps (HD maps) are essential for the precise navigation and decision-making of autonomous vehicles, 
+            yet their creation and upkeep present significant cost and timeliness challenges. The online construction of HD maps 
+            using on-board sensors has emerged as a promising solution; however, these methods can be impeded by incomplete data 
+            due to occlusions and inclement weather. This paper proposes the PriorDrive framework to addresses these limitations 
+            by harnessing the power of prior maps, significantly enhancing the robustness and accuracy of online HD map construction.
+          </p>
+          <p>
+           Our approach integrates a variety of prior maps, such as OpenStreetMap's Standard Definition Maps (SD maps), outdated HD maps 
+            from vendors, and locally constructed maps from historical vehicle data. To effectively encode this prior information into
+            online mapping models, we introduce a Hybrid Prior Representation (HPQuery) that standardizes the representation of diverse map elements.
+          </p>
+          <p>
+            At the core of PriorDrive is the Unified Vector Encoder (UVE), which employs a dual encoding mechanism to process vector data. 
+            The intra-vector encoder captures fine-grained local features, while the inter-vector encoder integrates global context. Furthermore, 
+            we propose a segment-level and point-level pre-training strategy that enables the UVE to learn the prior distribution of vector data, 
+            thereby improving the encoder's generalizability and performance.
+          </p>
+          <p>
+            Through extensive testing on the nuScenes dataset, we demonstrate that PriorDrive is highly compatible with various online mapping models
+            and substantially improves map prediction capabilities. The integration of prior maps through the PriorDrive framework offers a robust solution 
+            to the challenges of single-perception data, paving the way for more reliable autonomous vehicle navigation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+            <div class="columns">
+               <h2 class="title is-2">Video</h2>
+            </div>
+            <div class="hero-body" style="text-align: center">
+                <div class="columns is-centered">
+                  <video poster="" autoplay="" muted="" loop="" style="pointer-events: none;">
+                    <source src="./static/videos/video1.mp4" type="video/mp4">
+                  </video>
+                </div>
+            </div>
+            <div class="hero-body" style="text-align: center">
+                <div class="columns is-centered">
+                  <video poster="" autoplay="" muted="" loop="" style="pointer-events: none;">
+                    <source src="./static/videos/video2.mp4" type="video/mp4">
+                  </video>
+                </div>
+            </div>
+            <div class="hero-body" style="text-align: center">
+                <div class="columns is-centered">
+                  <video poster="" autoplay="" muted="" loop="" style="pointer-events: none;">
+                    <source src="./static/videos/video3.mp4" type="video/mp4">
+                  </video>
+                </div>
+            </div>
+            <div class="hero-body" style="text-align: center">
+                <div class="columns is-centered">
+                  <video poster="" autoplay="" muted="" loop="" style="pointer-events: none;">
+                    <source src="./static/videos/video4.mp4" type="video/mp4">
+                  </video>
+                </div>
+            </div>
+  </div>
+</section>  
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2">Qualitative results</h2>
+            <div class="hero-body" style="text-align: center">
+                <div class="columns is-centered">
+                     <img src="./static/images/vis.jpg" alt="Description of the image" style="max-width: 100%; height: auto;" />
+                </div>
+            </div>
+  </div>
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            Qualitative results with and w/o online local prior. Prior maps can help restore obscured map 
+            elements and make predictions more complete and accurate.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>  
+  
+
+<section class="section">
+  <div class="container is-max-desktop">
+        <h2 class="title is-2">Main results</h2>
+            <div class="hero-body" style="text-align: center">
+                <div class="columns is-centered">
+                     <img src="./static/images/result.png" alt="Description of the image" style="max-width: 100%; height: auto;" />
+                </div>
+            </div>
+  </div>
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            Performance of various online mapping models with different prior maps on nuScenes within a 60m x 30m perception range.
+            “C” denotes camera input. The best results using the same backbone are highlighted in bold. The SD map is sourced from 
+            OpenStreetMap. The online local map refers to the historical prediction results. As the
+            nuScenes dataset lacks existing HD maps, we followed the approach of MapEX to create an HD map-EX*, simulating
+            existing HD maps by removing pedestrian crossings and lane dividers, while retaining only the road boundaries.
+          </p>
+        </div>
+      </div>
+    </div>
+</section>  
+  
+  
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <p>
+      If you find our work useful in your research, please cite our paper:
+    </p>  
+    <pre><code>@article{zeng2024driving,
+  title={Driving with Prior Maps: Unified Vector Prior Encoding for Autonomous Vehicle Mapping},
+  author={Zeng, Shuang and Chang, Xinyuan and Liu, Xinran and Pan, Zheng and Wei, Xing},
+  journal={arXiv preprint arXiv:2409.05352},
+  year={2024}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align: center">
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
